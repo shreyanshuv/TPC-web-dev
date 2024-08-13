@@ -1,0 +1,273 @@
+:root{
+  color-scheme: light dark;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: light-dark(#fff, #444);
+  color: light-dark(#444,#fff);
+  /*background-image: url('https://images.pling.com/img/00/00/54/79/90/2038805/png');*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #1a2238;
+}
+
+/*header {
+  background-image: url('https://i.pinimg.com/originals/4a/94/26/4a94268541d7a0ed95a8be5138e8a288.jpg');
+  color: #f4db7d;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 5px solid #ff6a3d;
+}*/
+header {
+  background-color: rgba(3, 3, 147, 0.8);
+  color: #f4db7d;
+  padding: 5px 20px;
+  text-align: left ;
+  border-bottom: 5px solid #ff6a3d;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+/*pht{
+  text-align: left;
+}*/
+
+header h1 { 
+  justify-content: center;
+  margin-left: 200px;
+  padding: 0%;
+  font-family: 'Times New Roman', Times, serif;}
+
+header .logo {
+  float: left;
+  
+}
+
+/*header .logo img {
+ padding: 10px 10px 10px 10px;
+   width: 50%; */
+  /* height: 70%px; Adjust as needed */
+  /* margin-right: 200px; 
+}*/
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  /* background-color: rgba(157, 170, 242, 0.9); */
+  padding: 10px 0;
+  padding-right: 75px;
+}
+
+
+nav a {
+  color: #db7b31;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: left ;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ff6a3d;
+  color: #f4db7d;
+}
+.account-icon {
+ position: absolute;
+  right: 20px; 
+  top: 56px;
+   /*top: 50%;*/
+  padding: 14px 20px;
+  transform: translateY(-50%);
+  
+}
+.account-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+section {
+  background-color: rgba(245, 245, 220, 0.9);
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: rgba(26, 34, 56, 0.8);
+  color: #f4db7d;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 5px solid #ff6a3d;
+}
+.sliderbody{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+}
+
+.slideshow-container {
+  width: 100%; /* Full width */
+  height: 75vh; /* 75% of viewport height */
+  max-width: 1200px; /* Maximum width for larger screens */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: slide 10s infinite;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+  opacity: 0.6;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  /*REMOVED CONTENT ON SLIDER*/
+  display: none;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+  100% { transform: translateX(0); }
+}
+
+.slide-1 {
+  background-image: url('https://phcoa.ac.in/wp-content/uploads/2022/07/campus-3.jpg'); /* College campus */
+}
+.slide-2 {
+  background-image: url('https://wallpapercave.com/wp/wp1915307.jpg'); /* College classroom */
+}
+.slide-3 {
+  background-image: url(''); /* Student studying */
+}
+.slide-4 {
+  background-image: url('https://wallpapercave.com/wp/wp1915307.jpg'); /* Graduation ceremony */
+}
+.slide-5 {
+  background-image: url('https://images.unsplash.com/photo-1594752466105-65c84d1dd95d'); /* College library */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+  display: none;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.next {
+  right: 15px;
+}
+
+.prev {
+  left: 15px;
+}
+
+@media (max-width: 600px) {
+  .slide-content h1 { font-size: 1.5em; }
+  .slide-content p { font-size: 1em; }
+}
+.grey-qo-regular {
+  font-family: "Grey Qo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.floating-button {
+  position: fixed;
+ bottom: 95px;
+  /* right: 46.3%; */
+  left: 50%;
+  /*-ms-transform: translate(-50%, -50%);*/
+  transform: translate(-50%, -50%);
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s;
+}
+
+.floating-button.visible {
+  opacity: 1; /* Show button */
+}
+
+.floating-button:hover {
+  background-color: #0056b3;
+}
