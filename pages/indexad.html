@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="stylead.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <button id="logout-button">Logout</button>
+
+        <div class="form-section">
+            <h2>Add Post</h2>
+            <form id="post-form" enctype="multipart/form-data">
+                <input type="text" id="post-title" placeholder="Post Title" required>
+                <textarea id="post-content" placeholder="Post Content" required></textarea>
+                <input type="file" id="post-image" accept="image/*" required>
+                <button type="submit">Add Post</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>Add Company</h2>
+            <form id="company-form">
+                <input type="text" id="company-name" placeholder="Company Name" required>
+                <input type="text" id="company-criteria" placeholder="Criteria" required>
+                <button type="submit">Add Company</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>Add News</h2>
+            <form id="news-form">
+                <input type="text" id="news-title" placeholder="News Title" required>
+                <textarea id="news-content" placeholder="News Content" required></textarea>
+                <button type="submit">Add News</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>List of Students</h2>
+            <form id="student-form" enctype="multipart/form-data">
+                <input type="text" id="student-name" placeholder="Student Name" required>
+                <input type="email" id="student-email" placeholder="Student Email" required>
+                <input type="file" id="student-document" accept=".pdf,.doc,.docx" required>
+                <button type="submit">Add Student</button>
+            </form>
+            <div id="student-list">
+                <!-- Student list will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

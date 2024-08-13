@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+.container {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+h1 {
+    color: #1e90ff;
+    margin-bottom: 20px;
+}
+
+.home-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #ff8c00;
+    font-size: 1.2em;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #1e90ff;
+}
+
+.info {
+    text-align: left;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff8c00, #ff6600);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff6600, #ff8c00);
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.4);
+}
+
+button:active {
+    background: linear-gradient(45deg, #ff8c00, #ff6600);
+    transform: scale(0.95);
+}
+
+.edit-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.edit-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-form button {
+    margin-right: 10px;
+}
+
+.edit-form button[type="submit"] {
+    background: linear-gradient(45deg, #4caf50, #388e3c);
+}
+
+.edit-form button[type="submit"]:hover {
+    background: linear-gradient(45deg, #388e3c, #4caf50);
+}
+
+.edit-form button[type="button"] {
+    background: linear-gradient(45deg, #f44336, #d32f2f);
+}
+
+.edit-form button[type="button"]:hover {
+    background: linear-gradient(45deg, #d32f2f, #f44336);
+}

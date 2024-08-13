@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="styleap.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="path/to/your/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h1>Your Account</h1>
+        <a href="C:\Users\SHRUTI\Desktop\shreyanshu\COLLEGE MINI PROJECT\SEM 3\PLACEMENT CELL WEBSITE\basic UI\index.html" class="home-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ff8c00" width="24px" height="24px">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            Home
+        </a>
+        <div class="profile">
+            <img src="https://pbs.twimg.com/media/FrYsGzJWwAEcrda.jpg" alt="Profile Photo" class="profile-photo">
+            <div class="info">
+                <p><strong>Username:</strong> <span id="username">john the meow</span></p>
+                <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
+                <button id="editProfileBtn">Edit Profile</button>
+                <button id="registerBtn">Register</button>
+            </div>
+        </div>
+        <div id="editProfileForm" class="edit-form" style="display: none;">
+            <h2>Edit Profile</h2>
+            <form id="profileForm">
+                <label for="editUsername">Username:</label>
+                <input type="text" id="editUsername" name="editUsername">
+                
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="editEmail">
+                
+                <button type="submit">Save Changes</button>
+                <button type="button" id="cancelEditBtn">Cancel</button>
+            </form>
+        </div>
+        <div id="registerForm" class="register-form" style="display: none;">
+            <h2>Register</h2>
+            <form id="registrationForm">
+                <label for="regName">Name:</label>
+                <input type="text" id="regName" name="regName" required>
+
+                <label for="regEmail">Email:</label>
+                <input type="email" id="regEmail" name="regEmail" required>
+
+                <label for="regPhone">Phone No.:</label>
+                <input type="tel" id="regPhone" name="regPhone" required>
+
+                <label for="regPointer">Pointer (for 8 sems):</label>
+                <input type="number" step="0.01" id="regPointer" name="regPointer" required>
+
+                <label for="regSemsPointer">Pointers for each semester (6 compulsory):</label>
+                <input type="number" step="0.01" id="regSem1" name="regSem1" placeholder="Sem 1" required>
+                <input type="number" step="0.01" id="regSem2" name="regSem2" placeholder="Sem 2" required>
+                <input type="number" step="0.01" id="regSem3" name="regSem3" placeholder="Sem 3" required>
+                <input type="number" step="0.01" id="regSem4" name="regSem4" placeholder="Sem 4" required>
+                <input type="number" step="0.01" id="regSem5" name="regSem5" placeholder="Sem 5" required>
+                <input type="number" step="0.01" id="regSem6" name="regSem6" placeholder="Sem 6" required>
+                <input type="number" step="0.01" id="regSem7" name="regSem7" placeholder="Sem 7">
+                <input type="number" step="0.01" id="regSem8" name="regSem8" placeholder="Sem 8">
+
+                <label>KTs:</label>
+                <div>
+                    <input type="radio" id="ktYes" name="regKTs" value="yes">
+                    <label for="ktYes">Yes</label>
+                    <input type="radio" id="ktNo" name="regKTs" value="no" checked>
+                    <label for="ktNo">No</label>
+                </div>
+                <div id="ktCountContainer" style="display: none;">
+                    <label for="regKTCount">Number of KTs:</label>
+                    <input type="number" id="regKTCount" name="regKTCount">
+                </div>
+
+                <label for="regCertifications">Certification Details:</label>
+                <textarea id="regCertifications" name="regCertifications"></textarea>
+
+                <label for="regCertFiles">Upload Certificates:</label>
+                <input type="file" id="regCertFiles" name="regCertFiles" multiple>
+
+                <button type="submit">Register</button>
+                <button type="button" id="cancelRegisterBtn">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <script src="indexap1.js"></script>
+</body>
+</html>
